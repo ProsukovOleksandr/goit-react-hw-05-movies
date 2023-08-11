@@ -10,7 +10,7 @@ export const getTrendingMovies = async () => {
         const response = await axios.get(TRENDING_URL);
         return response.data;
     } catch (error) {
-        console.log("getTrendingMovies", error);
+        alert("Oops, something went wrong...");
     }
 };
 
@@ -21,7 +21,7 @@ export const getQuerry = async (query) => {
         const response = await axios.get(QUERRY_URL);
         return response.data;
     } catch (error) {
-        console.log("getQuerry", error);
+        alert("Oops, something went wrong...");
     }
 };
 
@@ -32,7 +32,7 @@ export const getMovieDetails = async (id) => {
         const response = await axios.get(MOVIE_DETAILS_URL);
         return response.data;
     } catch (error) {
-        console.log("getMovieDetails", error)
+        alert("Oops, something went wrong...")
     }
 };
 
@@ -43,7 +43,7 @@ export const getMovieCredits = async (id) => {
         const response = await axios.get(MOVIE_CREDITS_URL);
         return response.data.cast;
     } catch (error) {
-        console.log("getMovieCredits", error)
+        alert("Oops, something went wrong...")
     }
 };
 
@@ -54,6 +54,6 @@ export const getMovieReview = async (id) => {
         const response = await axios.get(MOVIE_REVIEW_URL);
         return response.data.results;
     } catch (error) {
-        console.log("getMovieReview", error)
+        alert("Oops, something went wrong...")
     }
 };
